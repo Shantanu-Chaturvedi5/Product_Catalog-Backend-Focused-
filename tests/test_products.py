@@ -1,0 +1,9 @@
+def test_products(
+    client
+):
+
+    response = client.get(
+        "/products"
+    )
+
+    assert response.status_code == 200
