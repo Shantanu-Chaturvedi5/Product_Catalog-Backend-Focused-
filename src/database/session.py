@@ -13,7 +13,10 @@ from src.middleware.request_id import add_db_time
 engine = create_async_engine(
     settings.DATABASE_URL,
     pool_pre_ping=True,
-    echo=False
+    echo=False,
+    connect_args={
+        "ssl": True
+    }
 )
 
 
